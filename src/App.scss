@@ -1,0 +1,174 @@
+@import "./common.scss";
+
+* {
+  font-family: "Roboto", sans-serif !important;
+  color: $primary;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+button {
+  &.btn-outline {
+    border: solid 2px $subcolor;
+    padding: 14px 30px;
+    border-radius: 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: $subcolor;
+    text-transform: uppercase;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.grey {
+  color: rgba($color: $primary, $alpha: 0.6);
+}
+
+::-webkit-scrollbar {
+  background-color: $grey-light;
+  width: 4px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $subcolor;
+  border-radius: 15px;
+}
+
+.subtitle {
+  span {
+    color: $subcolor;
+  }
+}
+
+.nav-pills-col {
+  .nav-pills {
+    display: block;
+    .nav-link {
+      display: block;
+      min-width: auto;
+      background: $grey-light;
+      border-radius: 0;
+      margin-bottom: 10px;
+      text-align: left;
+      color: $primary;
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      &.active {
+        background: $primary;
+        color: white;
+      }
+    }
+  }
+}
+
+.complex-name {
+  display: list-item;
+  margin-right: 3px;
+  margin-left: 20px;
+  font-weight: 600;
+  &::marker {
+    color: $subcolor;
+  }
+}
+
+.address {
+  color: rgba($color: $primary, $alpha: 0.6);
+}
+
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.dropdown {
+  button {
+    background-color: white;
+    border-color: $grey;
+    color: $primary;
+    border-radius: 0;
+    padding: 12px;
+    &:hover {
+      background-color: transparent;
+      color: $primary;
+      box-shadow: none;
+    }
+  }
+  .dropdown-toggle {
+    text-align: left;
+    &::after {
+      float: right;
+      margin-top: 10px;
+      color: $subcolor;
+    }
+  }
+  .dropdown-menu.show {
+    width: 100%;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .main-container {
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 5px;
+    overflow-x: hidden;
+  }
+  .nav-pills-col {
+    height: 63vh;
+    overflow-y: scroll;
+  }
+  .details-pane {
+    height: 63vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .back-box {
+    position: absolute;
+    top: 30vw;
+    left: 75vw;
+    width: 9.25vw;
+    height: 44vh;
+    background: $blue-light;
+    z-index: -1;
+  }
+  .dots-bg {
+    position: absolute;
+    top: 10.5vw;
+    left: 57vw;
+  }
+  .subtitle {
+    position: relative;
+    width: 20vw;
+    word-break: break-all;
+    background: white;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  * {
+    font-size: 14px;
+  }
+  .subtitle span {
+    font-size: 21px;
+  }
+  button {
+    width: 100%;
+  }
+  .dots-bg {
+    position: relative;
+    width: 93vw;
+    top: 15vw;
+  }
+  .subtitle {
+    position: relative;
+    width: 97vw;
+    background: white;
+    padding: 10px 0;
+  }
+}

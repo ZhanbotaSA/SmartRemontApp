@@ -1,0 +1,25 @@
+@import "../common.scss";
+
+.slick-arrow {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  background: $subcolor;
+  z-index: 1;
+  cursor: pointer;
+  &:hover{
+    background: darken($color: $subcolor, $amount: 5);
+  }
+  img {
+    width: 12px;
+  }
+  &.left {
+    right: 40px;
+  }
+  &.right {
+    right: 0;
+  }
+}
